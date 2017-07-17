@@ -18,9 +18,9 @@ int main(){
 	double yinitial;
 
 	cout<<endl;
-	cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
-	cout<<"This is an Euler approximation for the ODE y'=sin(xy)."<<endl;
-	cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+	cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+	cout<<"This is an Euler approximation for the ODE y'=sin(xy)+cos(x+y)."<<endl;
+	cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
 	cout<<endl;
 
 	cout<<"Please your time increment: ";
@@ -56,7 +56,7 @@ void eulerstep(double stepinc, double initiall, int numm){
 	outfile.setf(ios::showpoint);
 	outfile.precision(6);
 
-	outfile<<"Euler approximation for y'=sin(xy) with initial condition y(0)="<<initiall<<", time step of "<<stepinc<<" and "
+	outfile<<"Euler approximation for y'=sin(xy)+cos(x+y) with initial condition y(0)="<<initiall<<", time step of "<<stepinc<<" and "
 	<<numm<<" steps."<<endl;
 
 	outfile<<"x,y(x),y'(x),y_new"<<endl;
@@ -64,7 +64,7 @@ void eulerstep(double stepinc, double initiall, int numm){
 
 	for (int i=0; i<numm; i++){
 		x=x+stepinc;
-		double yprime=sin(x*initiall);
+		double yprime=sin(x*initiall)+cos(x+initiall);
 		double ynew=initiall+stepinc*yprime;
 		outfile<<x<<","<<initiall<<","<<yprime<<","<<ynew<<","<<endl;
 		initiall=ynew;
