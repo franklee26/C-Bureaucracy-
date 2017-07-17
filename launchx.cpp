@@ -1,8 +1,7 @@
-// Frank Lee 16/7
-// This program is for .txt files. See launchx.cpp for the CSV equivalent.
+// Frank Lee 17/7
+// This program is for CSV files
 // Building a "table" for an Euler approximation for y'=sin(xy) with y(0)=0.
-// We know that the solution is simply y(x)=exp(x) (? not for this ex.). A great testing value
-// is just y(1)=2.718...
+// Goal is to export to a .csv file
 
 #include <iostream>
 #include <fstream>
@@ -19,9 +18,9 @@ int main(){
 	double yinitial;
 
 	cout<<endl;
-	cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
-	cout<<"This is an Euler approximation for the ODE y'=y."<<endl;
-	cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+	cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
+	cout<<"This is an Euler approximation for the ODE y'=sin(xy)."<<endl;
+	cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
 	cout<<endl;
 
 	cout<<"Please your time increment: ";
@@ -45,7 +44,7 @@ int main(){
 void eulerstep(double stepinc, double initiall, int numm){
 
 	string filename;
-	cout<<"Please enter your file name with an .txt extention: ";
+	cout<<"Please enter your file name with an .csv extention: ";
 	cin>>filename;
 
 	ofstream outfile;
@@ -60,14 +59,14 @@ void eulerstep(double stepinc, double initiall, int numm){
 	outfile<<"Euler approximation for y'=sin(xy) with initial condition y(0)="<<initiall<<", time step of "<<stepinc<<" and "
 	<<numm<<" steps."<<endl;
 
-	outfile<<"x\t\ty(x)\t\ty'(x)\t\ty_new"<<endl;
+	outfile<<"x,y(x),y'(x),y_new"<<endl;
 	outfile<<endl;
 
 	for (int i=0; i<numm; i++){
 		x=x+stepinc;
 		double yprime=sin(x*initiall);
 		double ynew=initiall+stepinc*yprime;
-		outfile<<x<<"\t"<<initiall<<"\t"<<yprime<<"\t"<<ynew<<endl;
+		outfile<<x<<","<<initiall<<","<<yprime<<","<<ynew<<","<<endl;
 		initiall=ynew;
 	}
 
