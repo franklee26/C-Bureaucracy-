@@ -1,7 +1,6 @@
 // Frank Lee 17/7
 // This program is for CSV files
 // Building a "table" for an Euler approximation for y'=sin(xy) with y(0)=0.
-// Goal is to export to a .csv file
 
 #include <iostream>
 #include <fstream>
@@ -21,7 +20,7 @@ int main(){
 	cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
 	cout<<"This is an Euler approximation for the ODE y'=sin(xy)+cos(x+y)."<<endl;
 	cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
-	cout<<endl;
+	cout<<endl; 
 
 	cout<<"Please your time increment: ";
 	cin>>timeincrement;
@@ -33,9 +32,9 @@ int main(){
 	eulerstep(timeincrement,yinitial,numpoints);
 
 	cout<<endl;
-	cout<<"===+++===========================+++==="<<endl;
+	cout<<"===++===========================++==="<<endl;
 	cout<<"Your Euler approximation is finished."<<endl;
-	cout<<"===+++===========================+++==="<<endl;
+	cout<<"===++===========================++==="<<endl;
 	cout<<endl;
 
 	return 0;
