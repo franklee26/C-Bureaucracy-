@@ -1,0 +1,1 @@
+ void convertbin(int adecimal);
