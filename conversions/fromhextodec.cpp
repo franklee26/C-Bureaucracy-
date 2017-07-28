@@ -40,7 +40,7 @@ void convert(string numm){
 	}
 
 	cout<<endl;
-	cout<<"\e[1;31m             ~~~The hexadecimal digit "<<numm<<" is \e[0m"<<finalnum<<"\e[1;31m in decimal.~~~\e[0m"<<endl;
+	cout<<"\e[1;31m             ~~~The hexadecimal digit "<<numm<<" is "<<finalnum<<" in decimal.~~~\e[0m"<<endl;
 	cout<<"--------------------------------------------------------------------------------"<<endl;
 	cout<<endl;
 

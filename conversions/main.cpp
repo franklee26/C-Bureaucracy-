@@ -17,15 +17,17 @@ string type;
 
 int main(){
 
+	cout<<"Conversion program v1. 27/6 Frank Lee."<<endl;
+
 	cout<<endl;
 	cout<<"          ======================================================="<<endl;
 	cout<<endl;
-	cout<<"          This program converts between base 2 or 16 and decimal."<<endl;
+	cout<<"          \e[1mThis program converts between base 2 or 16 and decimal.\e[0m"<<endl;
 	cout<<endl;
 	cout<<"          ======================================================="<<endl;
 	cout<<endl;
 
-	cout<<"Would you like to convert from another base to decimal (enter y) or decimal to another base (enter n)? (enter \e[1;32mquit\e[0m to quit) ";
+	cout<<"Would you like to convert from another base to decimal (\e[1;36menter y\e[0m) or decimal to another base (\e[1;36menter n\e[0m)? (enter \e[1;32mquit\e[0m to quit) ";
 	cin>>response;
 
 	if (response=="y"){
@@ -33,7 +35,7 @@ int main(){
 		cin>>base; 
 
 		if (base == 12345){
-			cout<<"exiting..."<<endl;
+			cout<<"\e[1;32mexiting...\e[0m"<<endl;
 			exit(1);
 		} else if (base!=2 && base!=16){
 			cout<<endl;
