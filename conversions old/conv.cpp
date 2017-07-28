@@ -21,7 +21,7 @@ void convertb(string numm){
 	}
 
 	cout<<endl;
-	cout<<"\e[1;31m              ~~~The binary digit "<<numm<<" is "<<finalnum<<" in decimal.~~~\e[0m"<<endl;
+	cout<<"             ~~~The binary digit "<<numm<<" is "<<finalnum<<" in decimal.~~~"<<endl;
 	cout<<"----------------------------------------------------------------------------"<<endl;
 	cout<<endl;
 

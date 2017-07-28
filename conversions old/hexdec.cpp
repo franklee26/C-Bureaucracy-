@@ -47,7 +47,7 @@ void converthex(int adecimal){
 			numm="F"+numm;
 		}
 	cout<<endl;
-	cout<<"\e[1;31m             ~~~The decimal digit "<<x<<" is "<<numm<<" in hexadecimal.~~~\e[0m"<<endl;
+	cout<<"             ~~~The decimal digit "<<x<<" is "<<numm<<" in hexadecimal.~~~"<<endl;
 	cout<<"----------------------------------------------------------------------------"<<endl;
 	cout<<endl;
 }

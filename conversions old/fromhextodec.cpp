@@ -4,15 +4,13 @@
 #include <cstdlib>
 #include <string>
 #include <cmath>
-#include <cctype>
 using namespace std;
 
 void convert(string numm){
 	int lengtho=numm.length();
 	int finalnum(0);
 
-	for (char & cl : numm){
-		char c=toupper(cl);
+	for (char & c : numm){
 		if ((c!='A')&&(c!='B')&&(c!='C')&&(c!='D')&&(c!='E')&&(c!='F')){
 			int i = c - '0'; //converting a char-type to an int-type
 			double digit=i*pow(16,lengtho-1);
@@ -40,7 +38,7 @@ void convert(string numm){
 	}
 
 	cout<<endl;
-	cout<<"\e[1;31m             ~~~The hexadecimal digit "<<numm<<" is \e[0m"<<finalnum<<"\e[1;31m in decimal.~~~\e[0m"<<endl;
+	cout<<"             ~~~The hexadecimal digit "<<numm<<" is "<<finalnum<<" in decimal.~~~"<<endl;
 	cout<<"--------------------------------------------------------------------------------"<<endl;
 	cout<<endl;
 

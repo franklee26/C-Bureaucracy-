@@ -25,7 +25,7 @@ int main(){
 	cout<<"          ======================================================="<<endl;
 	cout<<endl;
 
-	cout<<"Would you like to convert from another base to decimal (enter y) or decimal to another base (enter n)? (enter \e[1;32mquit\e[0m to quit) ";
+	cout<<"Would you like to convert from another base to decimal (enter y) or decimal to another base (enter n)? ";
 	cin>>response;
 
 	if (response=="y"){
@@ -67,13 +67,6 @@ int main(){
 			cin>>decc;
 			converthex(decc);
 		}
-
-		while (type != "quit"){
-			main();
-		}
-	} else if (response=="quit"){
-		cout<<"\e[1;32mExiting...\e[0m"<<endl;
-		exit(0);
 	}
 
 	return 0;

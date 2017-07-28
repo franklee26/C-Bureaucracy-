@@ -20,7 +20,7 @@ void convertbin(int adecimal){
 	numm=to_string(adecimal)+numm;
 	int binary=stoll(numm);
 	cout<<endl;
-	cout<<"\e[1;31m             ~~~The decimal digit "<<x<<" is "<<binary<<" in binary.~~~\e[0m"<<endl;
+	cout<<"             ~~~The decimal digit "<<x<<" is "<<binary<<" in binary.~~~"<<endl;
 	cout<<"----------------------------------------------------------------------------"<<endl;
 	cout<<endl;
 }
